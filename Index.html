@@ -1,1 +1,79 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Mis datos</title>
+
+</head>
+
+<body bgcolor="#87CEEB">
+    <button onclick="cambiarColor('#BDFCC9')">Cambiar color</button>
+    <button onclick="regresarColor('#87CEEB')">Regresar color</button>
+    <h2 id="mensaje">Hola mundo</h2>
+    <button onclick="ocultarMensaje()">Ocultar mensaje</button>
+    <button onclick="mostrarMensaje()">Mostrar mensaje</button>
+    <div>
+        <h1>Mis datos personales</h1>
+        <ul>
+            <li><strong>Nombre:</strong> Jair Antonio Martinez Valladares</li>
+            <li><strong>Carrera y grupo:</strong> Desarrollo de Software Multiplataforma, Grupo B</li>
+            <li><strong>Correo institucional:</strong> 20223tn068@utez.edu.mx</li>
+            <li><strong>Matrícula:</strong> 20223tn068 </li>
+            <li><strong>Estudios previos:</strong> Preparatoria en Cbtis 82</li>
+            <li id="pasatiempos"><strong>Pasatiempos:</strong> Jugar videojuegos, ver peliculas, jugar futbol, escuchar
+                musica</li>
+            <li id="texto"><strong>Banda Favorita:</strong> Mis bandas favoritas son Pink Floyd</li>
+            <button onclick="cambiarTexto()">Cambiar texto</button>
+        </ul>
+
+        <img id="imagen" src="img.png" width="300" height="300">
+        <br>
+        <button onclick="cambiarImagen('img2.jpg')">Cambiar imagen</button>
+        <button onclick="regresarImagen('img.png')">Regresar imagen</button>
+    </div>
+
+    <br>
+    <div id="miDiv">
+
+        <button onclick="escribirTexto()">Escribir texto</button>
+
+    </div>
+    
+    <script>
+        function cambiarColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function regresarColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+        function cambiarTexto() {
+            document.getElementById('texto').innerHTML = "<strong>Banda Favorita:</strong> Mis bandas favoritas son Pink Floyd y The beatles";
+        }
+        function cambiarImagen(imagen) {
+            document.getElementById('imagen').src = imagen;
+        }
+        function regresarImagen(imagen) {
+            document.getElementById('imagen').src = imagen;
+        }
+        function ocultarMensaje() {
+            var mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'none';
+        }
+        function mostrarMensaje() {
+            var mensaje = document.getElementById('mensaje');
+            mensaje.style.display = 'block';
+        }
+        function escribirTexto() {
+            var div = document.getElementById('miDiv');
+            var h1 = document.createElement('h1');
+            h1.textContent = "Este texto no lo escribió Jair, lo escribió JavaScript";
+            div.appendChild(h1);
+        }
+    </script>
+
+</body>
+
+</html>
