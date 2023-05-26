@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="codigo.js"></script>
+    <link rel="stylesheet" type="text/css" href="Estilos.css">
+    <title>Formulario de registro</title>
+</head>
+
+<body>
+
+    <center><h1 id="Titulo">Formulario de registro de personas</h1></center>
+
+    <form action="respuesta.html" method="get">
+
+        <div class="containerA">
+            <label for="nombre">Nombre:</label><input type="text" name="nombree" id="nombre"><br>
+            <label for="apellidoP">Apellido Paterno:</label><input type="text" name="apellidoP" id="apellidoP"><br>
+            <label for="apellidoM">Apellido Materno:</label><input type="text" name="apellidoM" id="apellidoM"><br>
+            <label for="correo">Correo:</label><input type="email" name="email" id="correo"><br>
+            <label for="fecha">Fecha de nacimiento:</label><input type="date" name="fecha" id="fecha"><br>
+            <label for="tel">Telefono:</label><input type="number" name="tel" id="tel"><br>
+            <label for="usuario">Usuario:</label><input type="text" name="usuario" id="usuario"><br>
+            <label for="contra">Contraseña:</label><input type="password" name="contra" id="contrasena"><br>
+            <label for="repetirContra">Repetir Contraseña:</label><input type="password" name="repetirContra" id="repetirContra"><br>
+            <input type="submit" value="Registrar" onclick="validarContraseña()"><br>
+        </div>
+    </form>
+
+</body>
+
+</html>
